@@ -1,0 +1,335 @@
+@font-face {
+  font-family: gothic;
+  src: url(assets/fonts/GOTHIC.TTF);
+}
+
+@font-face {
+  font-family: gothic-bold;
+  src: url(assets/fonts/GOTHICB0.TTF);
+}
+
+* {
+  font-family: "gothic";
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  height: 12vh;
+  width: 100vw;
+  padding: 0rem 1.5rem;
+}
+
+nav.active {
+  /* transition: cubic-bezier(0.47, 0, 0.745, 0.715); */
+  animation: fadeIn 5s;
+  box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(25px);
+  background: rgba(245, 250, 255, 0.712);
+}
+
+nav img {
+  height: 8vh;
+}
+
+nav h1 {
+  font-size: 1.8rem;
+  letter-spacing: 2.5px;
+  padding-left: 0.5rem;
+}
+
+nav li {
+  font-size: 1.1rem;
+  display: inline-flex;
+  padding: 0 2vw;
+}
+
+nav .navlist p {
+  margin: 0 1.5vw 0 2vw;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bolder;
+  color: #fff;
+  background: #1684b3;
+}
+
+header {
+  padding: 12vh 3vw;
+  height: 100vh;
+  background: linear-gradient(15deg, #87c7fc66, #daeeff00, #ffffff00);
+}
+
+header .txt {
+  padding: 10vh 8vw;
+  height: 85vh;
+}
+
+header h2 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+header h4 {
+  margin-top: 6vh;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+}
+
+header h5 {
+  margin-top: 10vh;
+  font-size: 1.2rem;
+  letter-spacing: 1.5px;
+}
+
+header h6 {
+  margin-top: 7vh;
+  font-family: "gothic-bold";
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: #0031d4;
+  letter-spacing: 1.25px;
+}
+
+header .logo-wrapper {
+  padding: 6vh 0;
+  height: 90vh;
+  z-index: -1;
+  top: 0vh;
+  right: 3vw;
+}
+
+header .logo {
+  height: 90vh;
+}
+
+header .logo img {
+  height: 75vh;
+}
+
+section {
+  padding: 7vh 11vw;
+}
+
+section h3 {
+  font-size: 1.8rem;
+  text-align: center;
+  padding: 6vh 0 6vh;
+}
+
+section p {
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  line-height: 1.8;
+  text-align: center;
+}
+
+section.who-are-we h4 {
+  padding-top: 10vh;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.marquee {
+  height: 32px;
+  width: 100%;
+  margin: 5vh 0 3vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee div {
+  display: inline-block;
+  width: max-content;
+  position: absolute;
+  overflow: hidden;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee span {
+  float: left;
+  width: max-content;
+}
+
+.marquee:hover div {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -1100px;
+  }
+}
+
+.who-are-we .enquire-btn span {
+  font-size: 1.2rem;
+  width: fit-content;
+  margin: 0 1.5vw 0 2vw;
+  padding: 8px 24px 12px;
+  border-radius: 8px;
+  font-weight: bolder;
+  color: #fff;
+  background: #1684b3;
+}
+
+.who-are-we .marquee a {
+  font-size: 1.15rem;
+  font-weight: bold;
+}
+
+section.why-choose-us {
+  background: linear-gradient(150deg, #94ebe793, #94ebe75e, #ffffff00);
+}
+
+section.why-choose-us {
+  margin: 7vh 0;
+}
+
+section.why-choose-us h3 {
+  margin: -3vh 0;
+}
+
+.accordion-container {
+  color: #050505;
+  margin: 0 auto;
+  padding: 0 8rem 0 0;
+  width: 50vw;
+}
+
+.accordion .accordion-item {
+  padding: 1vh 1.5vw;
+  margin: 3vh 0;
+  border: 1px solid #4d597486;
+  border-radius: 12px;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1rem 0;
+  color: #0025ff;
+  font-family: "gothic-bold";
+  font-size: 1.15rem;
+  font-weight: normal;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: #050505;
+}
+
+.accordion button:hover::after,
+.accordion button:focus::after {
+  cursor: pointer;
+  color: #050505;
+  border: 1px solid #050505;
+}
+
+.accordion button .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+
+.accordion button .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion button .icon::before {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+.accordion button .icon::after {
+  display: block;
+  position: absolute;
+  content: "";
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded="true"] {
+  color: #000682;
+}
+.accordion button[aria-expanded="true"] .icon::after {
+  width: 0;
+}
+.accordion button[aria-expanded="true"] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 500;
+  padding-bottom: 1rem;
+}
+
+.one-step {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 35vw;
+  height: 65vh;
+  border: 1px solid black;
+  border-radius: 16px;
+}
+
+.one-step button {
+  all: unset;
+  display: flex;
+  justify-content: center;
+  width: max-content;
+  margin: auto;
+  font-size: 1.2rem;
+  padding: 1.5vh 3vw 2vh;
+  border: 1px solid black;
+  border-radius: 16px;
+}
+
+.one-step button i {
+  transform: rotate(180deg);
+  margin-left: 1.5rem;
+}
