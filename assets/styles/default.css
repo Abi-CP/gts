@@ -36,6 +36,9 @@
 .inline {
   display: inline;
 }
+.inline-flex{
+  display: inline-flex;
+}
 .dnone {
   display: none;
 }
@@ -51,4 +54,14 @@
 }
 .relative {
   position: relative;
+}
+
+.clickable {
+  cursor: pointer;
+}
+.clickable:hover {
+  filter: brightness(90%);
+}
+.clickable:active {
+  transform: scale(95%);
 }
